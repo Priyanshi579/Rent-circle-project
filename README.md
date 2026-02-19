@@ -1,4 +1,4 @@
-##Rent Circle is a peer-to-peer rental application designed for college students.
+**Rent Circle** is a peer-to-peer rental application designed for college students.
 The platform enables students to list items such as books, electronics, calculators, sports equipment, and daily-use essentials for rent.
 
 It promotes:
