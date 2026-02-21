@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+<h3>Available Today</h3>
+{% for item in today_items %}
+<p>
+{{ item.name }} - ₹{{ item.price_per_day }}/day
+<a href="{{ url_for('borrow_item', item_id=item.id) }}">
+<button style="margin-top:5px;">Borrow</button>
+</a>
+</p>
+{% else %}
+<p>No items available today.</p>
+{% endfor %}
+
+<hr>
+
+<h3>Available Tomorrow Morning</h3>
+{% for item in tomorrow_items %}
+<p>
+{{ item.name }} - ₹{{ item.price_per_day }}/day
+<a href="{{ url_for('borrow_item', item_id=item.id) }}">
+<button style="margin-top:5px;">Borrow</button>
+</a>
+</p>
+{% else %}
+<p>No items available tomorrow.</p>
+{% endfor %}
+
+{% endblock %}
